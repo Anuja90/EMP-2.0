@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Index</h1>
-Hello Testing
+
+<h1>New Employee</h1>
+
 </body>
 </html>
