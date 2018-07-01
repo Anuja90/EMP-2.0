@@ -5,14 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<head>
+ <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-        <title>Inbox - HRMS admin template</title>
+        <title>Dashboard - HRMS admin template</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/plugins/morris/morris.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
@@ -134,36 +135,105 @@
             </div>
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-inner slimscroll">
-					<div class="sidebar-menu">
+					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
-							<li> 
-								<a href="index.html"><i class="fa fa-home"></i> Back to Home</a>
-							</li>
-							<li class="menu-title"><a href="compose.html" class="btn btn-primary btn-block">Compose</a></li>
 							<li class="active"> 
-								<a href="inbox.html">Inbox <span class="mail-count">(21)</span></a>
+								<a href="index.html">Dashboard</a>
+							</li>
+							<li class="submenu">
+								<a href="#" class="noti-dot"><span> Employees</span> <span class="menu-arrow"></span></a>
+								<ul class="list-unstyled" style="display: none;">
+									<li><a href="employees.html">All Employees</a></li>
+									<li><a href="holidays.html">Holidays</a></li>
+									<li><a href="leaves.html"><span>Leave Requests</span> <span class="badge bg-primary pull-right">1</span></a></li>
+									<li><a href="attendance.html">Attendance</a></li>
+									<li><a href="departments.html">Departments</a></li>
+									<li><a href="designations.html">Designations</a></li>
+								</ul>
 							</li>
 							<li> 
-								<a href="#">Starred</a>
+								<a href="clients.html">Clients</a>
 							</li>
 							<li> 
-								<a href="#">Sent Mail</a>
+								<a href="projects.html">Projects</a>
 							</li>
 							<li> 
-								<a href="#">Trash</a>
+								<a href="tasks.html">Tasks</a>
+							</li>
+							<li class="submenu">
+								<a href="#"><span> Calls</span> <span class="menu-arrow"></span></a>
+								<ul class="list-unstyled" style="display: none;">
+									<li><a href="voice-call.html">Voice Call</a></li>
+									<li><a href="video-call.html">Video Call</a></li>
+									<li><a href="incoming-call.html">Incoming Call</a></li>
+								</ul>
 							</li>
 							<li> 
-								<a href="#">Draft <span class="mail-count">(8)</span></a>
-							</li>
-							<li class="menu-title">Label <a href="#"><i class="fa fa-plus"></i></a></li>
-							<li> 
-								<a href="#"><i class="fa fa-circle text-success mail-label"></i> Work</a>
+								<a href="contacts.html">Contacts</a>
 							</li>
 							<li> 
-								<a href="#"><i class="fa fa-circle text-danger mail-label"></i> Office</a>
+								<a href="leads.html">Leads</a>
+							</li>
+							<li class="submenu">
+								<a href="#"><span> Accounts </span> <span class="menu-arrow"></span></a>
+								<ul class="list-unstyled" style="display: none;">
+									<li><a href="estimates.html">Estimates</a></li>
+									<li><a href="invoices.html">Invoices</a></li>
+									<li><a href="payments.html">Payments</a></li>
+									<li><a href="expenses.html">Expenses</a></li>
+									<li><a href="provident-fund.html">Provident Fund</a></li>
+									<li><a href="taxes.html">Taxes</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="#"><span> Payroll </span> <span class="menu-arrow"></span></a>
+								<ul class="list-unstyled" style="display: none;">
+									<li><a href="salary.html"> Employee Salary </a></li>
+									<li><a href="salary-view.html"> Payslip </a></li>
+								</ul>
 							</li>
 							<li> 
-								<a href="#"><i class="fa fa-circle text-warning mail-label"></i> Personal</a>
+								<a href="worksheet.html">Timing Sheet</a>
+							</li>
+							<li> 
+								<a href="tickets.html">Tickets</a>
+							</li>
+							<li> 
+								<a href="events.html">Events</a>
+							</li>
+							<li> 
+								<a href="inbox.html">Email</a>
+							</li>
+							<li> 
+								<a href="chat.html">Chat <span class="badge bg-primary pull-right">5</span></a>
+							</li>
+							<li> 
+								<a href="assets.html">Assets</a>
+							</li>
+							<li> 
+								<a href="activities.html">Activities</a>
+							</li>
+							<li> 
+								<a href="users.html">Users</a>
+							</li>
+							<li class="submenu">
+								<a href="#"><span> Reports </span> <span class="menu-arrow"></span></a>
+								<ul class="list-unstyled" style="display: none;">
+									<li><a href="expense-reports.html"> Expense Report </a></li>
+									<li><a href="invoice-reports.html"> Invoice Report </a></li>
+								</ul>
+							</li>
+							<li> 
+								<a href="settings.html">Settings</a>
+							</li>
+							<li class="submenu">
+								<a href="#"><span> Pages </span> <span class="menu-arrow"></span></a>
+								<ul class="list-unstyled" style="display: none;">
+									<li><a href="login.html"> Login </a></li>
+									<li><a href="register.html"> Register </a></li>
+									<li><a href="forgot-password.html"> Forgot Password </a></li>
+									<li><a href="profile.html"> Profile </a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -172,414 +242,753 @@
             <div class="page-wrapper">
                 <div class="content container-fluid">
 					<div class="row">
-						<div class="col-xs-12">
-							<h4 class="page-title">Inbox</h4>
+						<div class="col-md-6 col-sm-6 col-lg-3">
+							<div class="dash-widget clearfix card-box">
+								<span class="dash-widget-icon"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+								<div class="dash-widget-info">
+									<h3>112</h3>
+									<span>Projects</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-3">
+							<div class="dash-widget clearfix card-box">
+								<span class="dash-widget-icon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+								<div class="dash-widget-info">
+									<h3>$44</h3>
+									<span>Clients</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-3">
+							<div class="dash-widget clearfix card-box">
+								<span class="dash-widget-icon"><i class="fa fa-diamond"></i></span>
+								<div class="dash-widget-info">
+									<h3>37</h3>
+									<span>Tasks</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-3">
+							<div class="dash-widget clearfix card-box">
+								<span class="dash-widget-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								<div class="dash-widget-info">
+									<h3>218</h3>
+									<span>Employees</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card-box">
-								<div class="email-header">
-									<div class="row">
-										<div class="col-sm-9 col-md-8 col-xs-8 top-action-left">
-											<div class="pull-left">
-												<div class="btn-group">
-													<a class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown">Select <i class="fa fa-angle-down "></i></a>
-													<ul class="dropdown-menu">
-														<li><a href="#">All</a></li>
-														<li><a href="#">None</a></li>
-														<li class="divider"></li>
-														<li><a href="#">Read</a></li>
-														<li><a href="#">Unread</a></li>
-													</ul>
-												</div>
-												<div class="btn-group">
-													<a class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown">Actions <i class="fa fa-angle-down "></i></a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Reply</a></li>
-														<li><a href="#">Forward</a></li>
-														<li><a href="#">Archive</a></li>
-														<li class="divider"></li>
-														<li><a href="#">Mark As Read</a></li>
-														<li><a href="#">Mark As Unread</a></li>
-														<li class="divider"></li>
-														<li><a href="#">Delete</a></li>
-													</ul>
-												</div>
-												<div class="btn-group">
-													<a aria-expanded="false" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i class="fa fa-folder"></i> <i class="fa fa-angle-down"></i></a>
-													<ul role="menu" class="dropdown-menu dropdown-menu-right">
-														<li><a href="#">Social</a></li>
-														<li><a href="#">Forums</a></li>
-														<li><a href="#">Updates</a></li>
-														<li class="divider"></li>
-														<li><a href="#">Spam</a></li>
-														<li><a href="#">Trash</a></li>
-														<li class="divider"></li>
-														<li><a href="#">New</a></li>
-													</ul>
-												</div>
-												<div class="btn-group">
-													<a aria-expanded="false" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i class="fa fa-tags"></i> <i class="fa fa-angle-down"></i></a>
-													<ul role="menu" class="dropdown-menu dropdown-menu-right">
-														<li><a href="#">Work</a></li>
-														<li><a href="#">Family</a></li>
-														<li><a href="#">Social</a></li>
-														<li class="divider"></li>
-														<li><a href="#">Primary</a></li>
-														<li><a href="#">Promotions</a></li>
-														<li><a href="#">Forums</a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="pull-left hidden-xs">
-												<input type="text" placeholder="Search Messages" class="form-control search-message">
-											</div>
-										</div>
-										<div class="col-sm-3 col-md-4 col-xs-4 top-action-right">
-											<div class="text-right">
-												<span class="text-muted hidden-xs">Showing 10 of 112 </span>
-												<a title="Refresh" data-toggle="tooltip" class="btn btn-default"><i class="fa fa-refresh"></i></a>
-												<div class="btn-group">
-													<a class="btn btn-default"><i class="fa fa-angle-left"></i></a>
-													<a class="btn btn-default"><i class="fa fa-angle-right"></i></a>
-												</div>
-											</div>
-										</div>
+							<div class="row">
+								<div class="col-sm-6 text-center">
+									<div class="card-box">
+										<div id="area-chart" ></div>
 									</div>
 								</div>
-								<div class="email-content">
-									<table class="table table-inbox table-hover">
-										<thead>
-											<tr>
-												<th colspan="6">
-													<input type="checkbox" class="checkbox-all">
-												</th>
-											</tr>
-											</thead>
-										<tbody>
-											<tr class="unread clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star starred"></i></span></td>
-												<td class="name hidden-xs">John Doe</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-												<td class="mail-date">13:14</td>
-											</tr>
-											<tr class="unread clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">Envato Account</td>
-												<td class="subject">Important account security update from Envato</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">8:42</td>
-											</tr>
-											<tr class="clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">Twitter</td>
-												<td class="subject">HRMS Bootstrap Admin Template</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">30 Nov</td>
-											</tr>
-											<tr class="unread clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">Richard Parker</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">18 Sep</td>
-											</tr>
-											<tr class="clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">John Smith</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">21 Aug</td>
-											</tr>
-											<tr class="clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">me, Robert Smith (3)</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">1 Aug</td>
-											</tr>
-											<tr class="unread clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">Codecanyon</td>
-												<td class="subject">Welcome To Codecanyon</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">Jul 13</td>
-											</tr>
-											<tr class="clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">Richard Miles</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
-												<td class="mail-date">May 14</td>
-											</tr>
-											<tr class="unread clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star-o"></i></span></td>
-												<td class="name hidden-xs">John Smith</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">11/11/16</td>
-											</tr>
-											<tr class="clickable-row" data-href="mail-view.html">
-												<td>
-													<input type="checkbox" class="checkmail">
-												</td>
-												<td><span class="mail-important"><i class="fa fa-star starred"></i></span></td>
-												<td class="name hidden-xs">Mike Litorus</td>
-												<td class="subject">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
-												<td class="hidden-xs"></td>
-												<td class="mail-date">10/31/16</td>
-											</tr>
-										</tbody>
-									</table>
+								<div class="col-sm-6 text-center">
+									<div class="card-box">
+										<div id="line-chart"></div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>	  
-					<div class="notification-box">
-						<div class="msg-sidebar notifications msg-noti">
-							<div class="topnav-dropdown-header">
-								<span>Messages</span>
-							</div>
-							<div class="drop-scroll msg-list-scroll">
-								<ul class="list-box">
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">R</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">Richard Miles </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item new-message">
-												<div class="list-left">
-													<span class="avatar">J</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">John Doe</span>
-													<span class="message-time">1 Aug</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">T</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author"> Tarah Shropshire </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">M</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">Mike Litorus</span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">C</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author"> Catherine Manseau </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">D</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author"> Domenic Houston </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">B</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author"> Buster Wigton </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">R</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author"> Rolland Webber </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">C</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author"> Claire Mapes </span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">M</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">Melita Faucher</span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">J</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">Jeffery Lalor</span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">L</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">Loren Gatlin</span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="chat.html">
-											<div class="list-item">
-												<div class="list-left">
-													<span class="avatar">T</span>
-												</div>
-												<div class="list-body">
-													<span class="message-author">Tarah Shropshire</span>
-													<span class="message-time">12:28 AM</span>
-													<div class="clearfix"></div>
-													<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
-												</div>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="topnav-dropdown-footer">
-								<a href="chat.html">See all messages</a>
+								<div  class="col-md-4 col-sm-12 text-center">
+									<div class="card-box">
+										<div id="bar-chart" ></div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12 text-center">
+									<div class="card-box">
+										<div id="stacked" ></div>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-12 text-center">
+									<div class="card-box">
+										<div id="pie-chart" ></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-                </div>
-            </div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="panel panel-table">
+								<div class="panel-heading">
+									<h3 class="panel-title">Invoices</h3>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-striped custom-table m-b-0">
+											<thead>
+												<tr>
+													<th>Invoice ID</th>
+													<th>Client</th>
+													<th>Due Date</th>
+													<th>Total</th>
+													<th>Status</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="invoice-view.html">#INV-0001</a></td>
+													<td>
+														<h2><a href="#">Hazel Nutt</a></h2>
+													</td>
+													<td>8 Aug 2017</td>
+													<td>$380</td>
+													<td>
+														<span class="label label-warning-border">Partially Paid</span>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="invoice-view.html">#INV-0002</a></td>
+													<td>
+														<h2><a href="#">Paige Turner</a></h2>
+													</td>
+													<td>17 Sep 2017</td>
+													<td>$500</td>
+													<td>
+														<span class="label label-success-border">Paid</span>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="invoice-view.html">#INV-0003</a></td>
+													<td>
+														<h2><a href="#">Ben Dover</a></h2>
+													</td>
+													<td>30 Nov 2017</td>
+													<td>$60</td>
+													<td>
+														<span class="label label-danger-border">Unpaid</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="panel-footer">
+									<a href="invoices.html" class="text-primary">View all invoices</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-table">
+								<div class="panel-heading">
+									<h3 class="panel-title">Payments</h3>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">	
+										<table class="table table-striped custom-table m-b-0">
+											<thead>
+												<tr>
+													<th>Invoice ID</th>
+													<th>Client</th>
+													<th>Payment Type</th>
+													<th>Paid Date</th>
+													<th>Paid Amount</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="invoice-view.html">#INV-0004</a></td>
+													<td>
+														<h2><a href="#">Barry Cuda</a></h2>
+													</td>
+													<td>Paypal</td>
+													<td>11 Jun 2017</td>
+													<td>$380</td>
+												</tr>
+												<tr>
+													<td><a href="invoice-view.html">#INV-0005</a></td>
+													<td>
+														<h2><a href="#">Tressa Wexler</a></h2>
+													</td>
+													<td>Paypal</td>
+													<td>21 Jul 2017</td>
+													<td>$500</td>
+												</tr>
+												<tr>
+													<td><a href="invoice-view.html">#INV-0006</a></td>
+													<td>
+														<h2><a href="#">Ruby Bartlett</a></h2>
+													</td>
+													<td>Paypal</td>
+													<td>28 Aug 2017</td>
+													<td>$60</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="panel-footer">
+									<a href="payments.html" class="text-primary">View all payments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="panel panel-table">
+								<div class="panel-heading">
+									<h3 class="panel-title">Clients</h3>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-striped custom-table m-b-0">
+											<thead>
+												<tr>
+													<th style="min-width:200px;">Name</th>
+													<th>Email</th>
+													<th>Status</th>
+													<th class="text-right">Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td style="min-width:200px;">
+														<a href="#" class="avatar">B</a>
+														<h2><a href="client-profile.html">Barry Cuda <span>CEO</span></a></h2>
+													</td>
+													<td>barrycuda@example.com</td>
+													<td>
+														<div class="dropdown action-label">
+															<a class="btn btn-white btn-sm rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-success"></i> Active <i class="caret"></i>
+															</a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a></li>
+																<li><a href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a></li>
+															</ul>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a class="avatar">T</a>
+														<h2><a href="client-profile.html">Tressa Wexler <span>Manager</span></a></h2>
+													</td>
+													<td>tressawexler@example.com</td>
+													<td>
+														<div class="dropdown action-label">
+															<a class="btn btn-white btn-sm rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> Inactive <i class="caret"></i>
+															</a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a></li>
+																<li><a href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a></li>
+															</ul>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="client-profile.html" class="avatar">R</a>
+														<h2><a href="client-profile.html">Ruby Bartlett <span>CEO</span></a></h2>
+													</td>
+													<td>rubybartlett@example.com</td>
+													<td>
+														<div class="dropdown action-label">
+															<a class="btn btn-white btn-sm rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> Inactive <i class="caret"></i>
+															</a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a></li>
+																<li><a href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a></li>
+															</ul>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="client-profile.html" class="avatar">M</a>
+														<h2><a href="client-profile.html"> Misty Tison <span>CEO</span></a></h2>
+													</td>
+													<td>mistytison@example.com</td>
+													<td>
+														<div class="dropdown action-label">
+															<a class="btn btn-white btn-sm rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-success"></i> Active <i class="caret"></i>
+															</a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a></li>
+																<li><a href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a></li>
+															</ul>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="client-profile.html" class="avatar">D</a>
+														<h2><a href="client-profile.html"> Daniel Deacon <span>CEO</span></a></h2>
+													</td>
+													<td>danieldeacon@example.com</td>
+													<td>
+														<div class="dropdown action-label">
+															<a class="btn btn-white btn-sm rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> Inactive <i class="caret"></i>
+															</a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a></li>
+																<li><a href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a></li>
+															</ul>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="panel-footer">
+									<a href="clients.html" class="text-primary">View all clients</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-table">
+								<div class="panel-heading">
+									<h3 class="panel-title">Recent Projects</h3>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-striped custom-table m-b-0">
+											<thead>
+												<tr>
+													<th class="col-md-3">Project Name </th>
+													<th class="col-md-3">Progress</th>
+													<th class="text-right col-md-1">Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<h2><a href="project-view.html">Food and Drinks</a></h2>
+														<small class="block text-ellipsis">
+															<span class="text-xs">1</span> <span class="text-muted">open tasks, </span>
+															<span class="text-xs">9</span> <span class="text-muted">tasks completed</span>
+														</small>
+													</td>
+													<td>
+														<div class="progress progress-xs progress-striped">
+															<div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="65%" style="width: 65%"></div>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2><a href="project-view.html">School Guru</a></h2>
+														<small class="block text-ellipsis">
+															<span class="text-xs">2</span> <span class="text-muted">open tasks, </span>
+															<span class="text-xs">5</span> <span class="text-muted">tasks completed</span>
+														</small>
+													</td>
+													<td>
+														<div class="progress progress-xs progress-striped">
+															<div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="15%" style="width: 15%"></div>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2><a href="project-view.html">Penabook</a></h2>
+														<small class="block text-ellipsis">
+															<span class="text-xs">3</span> <span class="text-muted">open tasks, </span>
+															<span class="text-xs">3</span> <span class="text-muted">tasks completed</span>
+														</small>
+													</td>
+													<td>
+														<div class="progress progress-xs progress-striped">
+															<div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="49%" style="width: 49%"></div>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2><a href="project-view.html">Harvey Clinic</a></h2>
+														<small class="block text-ellipsis">
+															<span class="text-xs">12</span> <span class="text-muted">open tasks, </span>
+															<span class="text-xs">4</span> <span class="text-muted">tasks completed</span>
+														</small>
+													</td>
+													<td>
+														<div class="progress progress-xs progress-striped">
+															<div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="88%" style="width: 88%"></div>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<h2><a href="project-view.html">The Gigs</a></h2>
+														<small class="block text-ellipsis">
+															<span class="text-xs">7</span> <span class="text-muted">open tasks, </span>
+															<span class="text-xs">14</span> <span class="text-muted">tasks completed</span>
+														</small>
+													</td>
+													<td>
+														<div class="progress progress-xs progress-striped">
+															<div class="progress-bar bg-success" role="progressbar" data-toggle="tooltip" title="100%" style="width: 100%"></div>
+														</div>
+													</td>
+													<td class="text-right">
+														<div class="dropdown">
+															<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+															<ul class="dropdown-menu pull-right">
+																<li><a href="#" title="Edit"><i class="fa fa-pencil m-r-5"></i> Edit</a></li>
+																<li><a href="#" title="Delete"><i class="fa fa-trash-o m-r-5"></i> Delete</a></li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="panel-footer">
+									<a href="projects.html" class="text-primary">View all projects</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="notification-box">
+					<div class="msg-sidebar notifications msg-noti">
+						<div class="topnav-dropdown-header">
+							<span>Messages</span>
+						</div>
+						<div class="drop-scroll msg-list-scroll">
+							<ul class="list-box">
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">R</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">Richard Miles </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item new-message">
+											<div class="list-left">
+												<span class="avatar">J</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">John Doe</span>
+												<span class="message-time">1 Aug</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">T</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author"> Tarah Shropshire </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">M</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">Mike Litorus</span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">C</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author"> Catherine Manseau </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">D</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author"> Domenic Houston </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">B</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author"> Buster Wigton </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">R</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author"> Rolland Webber </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">C</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author"> Claire Mapes </span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">M</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">Melita Faucher</span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">J</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">Jeffery Lalor</span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">L</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">Loren Gatlin</span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="chat.html">
+										<div class="list-item">
+											<div class="list-left">
+												<span class="avatar">T</span>
+											</div>
+											<div class="list-body">
+												<span class="message-author">Tarah Shropshire</span>
+												<span class="message-time">12:28 AM</span>
+												<div class="clearfix"></div>
+												<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="topnav-dropdown-footer">
+							<a href="chat.html">See all messages</a>
+						</div>
+					</div>
+				</div>			
+			</div>
         </div>
 		<div class="sidebar-overlay" data-reff="#sidebar"></div>
         <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
+		<script type="text/javascript" src="assets/plugins/morris/morris.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/raphael/raphael-min.js"></script>
 		<script type="text/javascript" src="assets/js/app.js"></script>
+		<script>
+				var data = [
+			  { y: '2014', a: 50, b: 90},
+			  { y: '2015', a: 65,  b: 75},
+			  { y: '2016', a: 50,  b: 50},
+			  { y: '2017', a: 75,  b: 60},
+			  { y: '2018', a: 80,  b: 65},
+			  { y: '2019', a: 90,  b: 70},
+			  { y: '2020', a: 100, b: 75},
+			  { y: '2021', a: 115, b: 75},
+			  { y: '2022', a: 120, b: 85},
+			  { y: '2023', a: 145, b: 85},
+			  { y: '2024', a: 160, b: 95}
+			],
+			config = {
+			  data: data,
+			  xkey: 'y',
+			  ykeys: ['a', 'b'],
+			  labels: ['Total Income', 'Total Outcome'],
+			  fillOpacity: 0.6,
+			  hideHover: 'auto',
+			  behaveLikeLine: true,
+			  resize: true,
+			  pointFillColors:['#ffffff'],
+			  pointStrokeColors: ['black'],
+				gridLineColor: '#eef0f2',
+			  lineColors:['gray','orange']
+		  };
+		config.element = 'area-chart';
+		Morris.Area(config);
+		config.element = 'line-chart';
+		Morris.Line(config);
+		config.element = 'bar-chart';
+		Morris.Bar(config);
+		config.element = 'stacked';
+		config.stacked = true;
+		Morris.Bar(config);
+		Morris.Donut({
+		  element: 'pie-chart',
+		  data: [
+			{label: "Employees", value: 30},
+			{label: "Clients", value: 15},
+			{label: "Projects", value: 45},
+			{label: "Tasks", value: 10}
+		  ]
+		});
+		</script>
     </body>
 </html>
