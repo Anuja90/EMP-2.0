@@ -28,10 +28,10 @@
 		<![endif]-->
 </head>
 <body>
-	<%@include file="Heder.jsp"%>
-	<%@include file="MenuBar.jsp"%>
+	
 	<div class="main-wrapper">
-
+		<%@include file="Heder.jsp"%>
+		<%@include file="sideMenu.jsp"%>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
 				<div class="row">
